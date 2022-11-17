@@ -1,0 +1,138 @@
+.showcase {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+    .showcase .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+        .showcase .container .right-img {
+            display: none;
+        }
+        .showcase .container .left-img {
+            display: none;
+        }
+
+        .showcase .container .showcase-text {
+            text-align: center;
+            font-family: var(--font-poppins);
+            font-size: var(--font-size-16);
+            font-weight: var(--font-weight-regular);
+
+        }
+            .showcase .container .showcase-text h1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-family: var(--font-poppins);
+                font-size: var(--font-size-65);
+                font-weight: var(--font-weight-extrabold);
+            }
+            .showcase .container .showcase-text p {
+                padding: 15px 0;
+                display: none;
+            }
+
+
+
+
+@media (min-width: 960px) {
+    .showcase {
+        padding-top: 20px;
+    }
+        .showcase .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1680px;
+    
+        }
+            .showcase .container .right-img {
+                display: none;
+                margin-right: -120px;
+            }
+            .showcase .container .left-img {
+                display: none;
+                margin-left: -120px;
+            }
+    
+            .showcase .container .showcase-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-family: var(--font-poppins);
+                font-size: var(--font-size-16);
+                font-weight: var(--font-weight-regular);
+    
+            }
+                .showcase .container .showcase-text h1 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: var(--font-poppins);
+                    font-size: var(--font-size-65);
+                    font-weight: var(--font-weight-extrabold);
+                }
+                .showcase .container .showcase-text p {
+                    padding: 15px 0;
+                    display: inline;
+                }
+    
+    
+}
+
+
+
+@media (min-width: 1600px) {
+    .showcase {
+        padding-top: 20px;
+    }
+        .showcase .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1680px;
+    
+        }
+            .showcase .container .right-img {
+                display: inline;
+                margin-right: -120px;
+            }
+            .showcase .container .left-img {
+                display: inline;
+                margin-left: -120px;
+            }
+    
+            .showcase .container .showcase-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-family: var(--font-poppins);
+                font-size: var(--font-size-16);
+                font-weight: var(--font-weight-regular);
+    
+            }
+                .showcase .container .showcase-text h1 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: var(--font-poppins);
+                    font-size: var(--font-size-65);
+                    font-weight: var(--font-weight-extrabold);
+                }
+                .showcase .container .showcase-text p {
+                    padding: 15px 0;
+                    display: inline;
+                }
+}
+    
+
+

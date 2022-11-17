@@ -1,0 +1,7 @@
+.map {
+    margin-bottom: 4rem;
+}
+    .map .google-map {
+        width: 100%;
+        height: 380px;
+    }

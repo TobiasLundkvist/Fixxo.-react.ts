@@ -1,0 +1,105 @@
+@import '../components/_navbarCateg.css';
+@import '../components/_navbarShop.css';
+
+
+.navbar .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+
+}
+
+    .navbar .container .logo {
+        grid-column: 1 / 2;
+        grid-row: 1 /  2;
+        margin: 10px
+    }
+    .navbar .container .menulinks {
+        display: none;
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        margin: 10px
+    }
+    
+    .navbar .container .navbarShop {
+        grid-column: 1 / 2; 
+        grid-row: 2 / 3 ;
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        text-decoration: none;
+    }
+
+
+@media (min-width: 992px) {
+    .navbar .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:"logo menulinks navbarshop";
+        max-width: 1680px;
+        padding-top: 20px;
+        width: 100%;
+    }
+
+        .navbar .container .logo {
+            grid-area: logo;
+            text-align: start;
+        }
+        .navbar .container .menulinks {
+            display: flex;
+            grid-area: menulinks;
+            justify-content: center;
+        }
+        
+        .navbar .container .navbarShop {
+            grid-area: navbarshop;
+            display: flex;
+            justify-content: flex-end;
+            text-decoration: none;
+            
+        }
+        
+    .active {
+        color: var(--color-red-hover);
+        text-decoration: underline;
+    } 
+}
+
+@media (min-width: 1600px) {
+    .navbar .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:"logo menulinks navbarshop";
+        max-width: 1680px;
+        padding-top: 20px;
+        width: 100%;
+    }
+
+        .navbar .container .logo {
+            grid-area: logo;
+            text-align: start;
+        }
+        .navbar .container .menulinks {
+            display: flex;
+            grid-area: menulinks;
+            justify-content: center;
+        }
+        
+        .navbar .container .navbarShop {
+            grid-area: navbarshop;
+            display: flex;
+            justify-content: flex-end;
+            text-decoration: none;
+        }
+        
+    .active {
+        color: var(--color-red-hover);
+        text-decoration: underline;
+    }  
+}
+

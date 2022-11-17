@@ -1,0 +1,113 @@
+html, body {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: var(--font-poppins);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-light-dark);
+}
+
+.gradient-gray {
+    background: var(--color-gray-1);
+    background: linear-gradient(90deg, var(--color-gray-1) 0%, var(--color-gray-0) 100%);
+}
+
+/* Knapparna */
+.btn-red {
+    position: relative;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    font-family: var(--font-poppins);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-semibold);
+    padding: 24px 65px;
+    border: none;
+    border-radius: 0;
+    transition: 0.3s ease-in-out;
+}
+
+    .btn-red:hover {
+        background-color: var(--color-red-hover)
+    }
+
+.btn-black {
+    position: relative;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    font-family: var(--font-poppins);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-semibold);
+    padding: 24px 65px;
+    border: none;
+    border-radius: 0;
+    transition: 0.3s ease-in-out;
+}
+
+    .btn-black:hover {
+        background-color: var(--color-red-hover)
+    }
+
+.btn-white {
+    position: relative;
+    background-color: var(--color-white);
+    color: var(--color-light-dark);
+    font-family: var(--font-poppins);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-semibold);
+    padding: 24px 65px;
+    border: none;
+    border-radius: 0;
+    transition: 0.3s ease-in-out;
+}
+
+    .btn-white:hover {
+        background-color: var(--color-red-hover)
+    }
+
+.corner-top-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 20px;
+    width: 20px;
+    border-left: 2px solid var(--color-white);
+    border-top: 2px solid var(--color-white);
+}
+
+.corner-bottom-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    border-right: 2px solid var(--color-white);
+    border-bottom: 2px solid var(--color-white); 
+}
+
+.container {
+    max-width: 1680px;
+
+}
+
+h2 {
+    position: relative;
+    font-family: var(--font-poppins);
+    font-size: var(--font-size-45);
+    font-weight: var(--font-weight-bold);
+}
+
+
+h4 {
+    font-family: var(--font-poppins);
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-bold); 
+}
+
+
+i {
+    color: var(--color-light-dark);
+}
+
+.active {
+    color: var(--color-red-hover);
+    text-decoration: underline;
+}

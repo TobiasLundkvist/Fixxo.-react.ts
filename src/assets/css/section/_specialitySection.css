@@ -1,0 +1,241 @@
+.speciality-background {
+    height: auto;
+    margin-top: 2rem;
+}
+    .speciality-background .speciality-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: var(--font-poppins);
+        font-size: var(--font-size-20);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-light-dark);
+        padding-top: 3rem;
+    }
+
+        .speciality-background .speciality-body {
+           display: flex; 
+           flex-direction: column;
+           justify-content: space-evenly;
+           align-items: center;
+           margin-top: 2rem;            
+        }
+            .speciality-background .speciality-text {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            } 
+                .speciality-background .speciality-text .speciality-info {
+                    height: 180px;
+                    width: 180px;
+                    background-color: var(--color-white);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    padding-left: 2.3rem;
+                }
+                    .speciality-background .speciality-text .speciality-info h3 {
+                        font-family: var(--font-poppins);
+                        font-size: var(--font-size-20);
+                        font-weight: var(--font-weight-semibold);
+                        color: var(--color-light-dark);
+                        padding-bottom: 0.6rem;
+                    }
+                    .speciality-background .speciality-text .speciality-info a {
+                        font-family: var(--font-poppins);
+                        font-size: var(--font-size-16);
+                        font-weight: var(--font-weight-semibold);
+                        color: var(--color-dark);
+                    }
+                .speciality-background .speciality-text div {
+                    height: 180px;
+                    width: 180px;
+                    background-color: var(--color-gray-1-5);
+                }
+
+@media (min-width: 720px) {
+    .speciality-background {
+        height: auto;
+        margin-top: 2rem;
+    }
+        .speciality-background .speciality-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--font-poppins);
+            font-size: var(--font-size-20);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-light-dark);
+            padding-top: 3rem;
+        }
+    
+            .speciality-background .speciality-body {
+               display: flex; 
+               flex-direction: column;
+               justify-content: space-evenly;
+               align-items: center;
+               margin-top: 2rem;
+            }
+                .speciality-background .speciality-text {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                } 
+                    .speciality-background .speciality-text .speciality-info {
+                        height: 180px;
+                        width: 180px;
+                        background-color: var(--color-white);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        padding-left: 2.3rem;
+                    }
+                        .speciality-background .speciality-text .speciality-info h3 {
+                            font-family: var(--font-poppins);
+                            font-size: var(--font-size-20);
+                            font-weight: var(--font-weight-semibold);
+                            color: var(--color-light-dark);
+                            padding-bottom: 0.6rem;
+                        }
+                        .speciality-background .speciality-text .speciality-info a {
+                            font-family: var(--font-poppins);
+                            font-size: var(--font-size-16);
+                            font-weight: var(--font-weight-semibold);
+                            color: var(--color-dark);
+                        }
+                    .speciality-background .speciality-text div {
+                        height: 180px;
+                        width: 180px;
+                        background-color: var(--color-gray-1-5);
+                    }
+    
+}
+
+@media (min-width: 960px) {
+    .speciality-background {
+        height: 410px;
+        margin-top: 2rem;
+    }
+        .speciality-background .speciality-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--font-poppins);
+            font-size: var(--font-size-20);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-light-dark);
+            padding-top: 3rem;
+        }
+    
+            .speciality-background .speciality-body {
+               display: flex; 
+               flex-direction: row;
+               justify-content: space-evenly;
+               align-items: center;
+               margin-top: 2rem;
+            }
+                .speciality-background .speciality-text {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                } 
+                    .speciality-background .speciality-text .speciality-info {
+                        height: 180px;
+                        width: 180px;
+                        background-color: var(--color-white);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        padding-left: 2.3rem;
+                    }
+                        .speciality-background .speciality-text .speciality-info h3 {
+                            font-family: var(--font-poppins);
+                            font-size: var(--font-size-20);
+                            font-weight: var(--font-weight-semibold);
+                            color: var(--color-light-dark);
+                            padding-bottom: 0.6rem;
+                        }
+                        .speciality-background .speciality-text .speciality-info a {
+                            font-family: var(--font-poppins);
+                            font-size: var(--font-size-16);
+                            font-weight: var(--font-weight-semibold);
+                            color: var(--color-dark);
+                        }
+                    .speciality-background .speciality-text div {
+                        height: 180px;
+                        width: 180px;
+                        background-color: var(--color-gray-1-5);
+                    }
+
+}
+
+
+@media (min-width: 1600px) {
+    .speciality-background {
+        height: 410px;
+        margin-top: 2rem;
+    }
+        .speciality-background .speciality-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--font-poppins);
+            font-size: var(--font-size-20);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-light-dark);
+            padding-top: 3rem;
+        }
+    
+            .speciality-background .speciality-body {
+               display: flex; 
+               flex-direction: row;
+               justify-content: space-evenly;
+               align-items: center;
+               margin-top: 2rem;
+            }
+                .speciality-background .speciality-text {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                } 
+                    .speciality-background .speciality-text .speciality-info {
+                        height: 245px;
+                        width: 245px;
+                        background-color: var(--color-white);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        padding-left: 2.3rem;
+                    }
+                        .speciality-background .speciality-text .speciality-info h3 {
+                            font-family: var(--font-poppins);
+                            font-size: var(--font-size-20);
+                            font-weight: var(--font-weight-semibold);
+                            color: var(--color-light-dark);
+                            padding-bottom: 0.6rem;
+                        }
+                        .speciality-background .speciality-text .speciality-info a {
+                            font-family: var(--font-poppins);
+                            font-size: var(--font-size-16);
+                            font-weight: var(--font-weight-semibold);
+                            color: var(--color-dark);
+                        }
+                    .speciality-background .speciality-text div {
+                        height: 245px;
+                        width: 245px;
+                        background-color: var(--color-gray-1-5);
+                    }
+    
+}

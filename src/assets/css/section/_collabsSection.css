@@ -1,0 +1,10 @@
+@import '../components/_collabPamela.css';
+@import '../components/_collabLetsBe.css';
+
+.collabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1680px;
+    margin-top: 60px;
+}

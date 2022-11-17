@@ -1,0 +1,38 @@
+.whiteCircle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    width: 36px;
+    background-color: var(--color-white);
+    color: var(--color-light-dark);
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 6px 4px var(--color-dark-shadow);
+    transition: 0.3s ease-in-out;
+    border: none;
+}
+    .whiteCircle:hover {
+        background-color: var(--color-gray-1);
+    }
+
+    .whiteCircle .active {
+        text-decoration: underline;
+    }
+        .whiteCircle .badge {
+            background-color: var(--color-red);
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-weight: var(--font-weight-medium);
+            transition: 0.3s ease-in-out;
+        }
+            .whiteCircle:hover .badge {
+                background-color: var(--color-red-hover)
+            }
+
+
+

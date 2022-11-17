@@ -1,0 +1,212 @@
+/* webshop info start */
+.webshop-info .webshop-info-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+    /* webshop winter-clearance part */
+    .webshop-info .webshop-info-body .webshop-info-body-1 {
+        position: relative;
+        width: 1045px;
+        height: 300px;
+        background-color: #CAC0BE;
+    }
+        .webshop-info .webshop-info-body .webshop-info-body-1 img {
+            display: none;
+        }
+
+        .webshop-info .webshop-info-body .webshop-info-body-1 h1 {
+            position: absolute;
+            top: 120px;
+            left: 10px;
+            font-family: var(--font-poppins);
+            font-size: 30px;
+            font-weight: var(--font-weight-bold);
+        }
+            .webshop-info .webshop-info-body .webshop-info-body-1 h1 span {
+                display: block;
+            }
+        .webshop-info .webshop-info-body .webshop-info-body-1 p {
+            display: none;
+            position: absolute;
+            top: 320px;
+            left: 40px;
+            width: 425px;
+            height: 75px;
+        }
+        .webshop-info .webshop-info-body .webshop-info-body-1 button {
+            position: absolute;
+            top: 210px;
+            left: 10px;
+        }
+
+    /* webshop new-arrivals part */
+    .webshop-info .webshop-info-body .webshop-info-body-2 {
+       position: relative; 
+       width: 635px;
+       height: 300px;
+       background-color: #E2E2E4;
+    }
+        .webshop-info .webshop-info-body .webshop-info-body-2 img {
+            display: none;
+        }
+        .webshop-info .webshop-info-body .webshop-info-body-2 h1 {
+            position: absolute;
+            top: 120px;
+            left: 10px;
+            font-family: var(--font-poppins);
+            font-size: 30px;
+            font-weight: var(--font-weight-bold); 
+        }
+            .webshop-info .webshop-info-body .webshop-info-body-2 h1 span {
+                display: block;
+            }
+        .webshop-info .webshop-info-body .webshop-info-body-2 button {
+            position: absolute;
+            top: 210px;
+            left: 10px;
+            padding: 24px 30px;
+        }
+@media (min-width: 960px) {
+    .webshop-info .webshop-info-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4rem;
+    }
+        /* webshop winter-clearance part */
+        .webshop-info .webshop-info-body .webshop-info-body-1 {
+            position: relative;
+            width: 1045px;
+            height: 560px;
+    
+        }
+            .webshop-info .webshop-info-body .webshop-info-body-1 img {
+                display: none;
+            }
+            .webshop-info .webshop-info-body .webshop-info-body-1 h1 {
+                position: absolute;
+                top: 180px;
+                left: 40px;
+                font-family: var(--font-poppins);
+                font-size: var(--font-size-45);
+                font-weight: var(--font-weight-bold);
+            }
+                .webshop-info .webshop-info-body .webshop-info-body-1 h1 span {
+                    display: block;
+                }
+            .webshop-info .webshop-info-body .webshop-info-body-1 p {
+                display: inline;
+                position: absolute;
+                top: 320px;
+                left: 40px;
+                width: 425px;
+                height: 75px;
+            }
+            .webshop-info .webshop-info-body .webshop-info-body-1 button {
+                position: absolute;
+                top: 420px;
+                left: 40px;
+            }
+    
+        /* webshop new-arrivals part */
+        .webshop-info .webshop-info-body .webshop-info-body-2 {
+           position: relative; 
+           width: 635px;
+           height: 560px;
+           background-color:  #E2E2E4;
+        }
+            .webshop-info .webshop-info-body .webshop-info-body-2 img {
+                display: none;
+            }
+            .webshop-info .webshop-info-body .webshop-info-body-2 h1 {
+                position: absolute;
+                top: 280px;
+                left: 40px;
+                font-family: var(--font-poppins);
+                font-size: var(--font-size-45);
+                font-weight: var(--font-weight-bold); 
+            }
+                .webshop-info .webshop-info-body .webshop-info-body-2 h1 span {
+                    display: block;
+                }
+            .webshop-info .webshop-info-body .webshop-info-body-2 button {
+                position: absolute;
+                top: 420px;
+                left: 40px;
+                padding: 24px 65px;
+            }
+
+}
+@media (min-width: 1600px) {
+    /* webshop info start */
+.webshop-info .webshop-info-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+    /* webshop winter-clearance part */
+    .webshop-info .webshop-info-body .webshop-info-body-1 {
+        position: relative;
+        width: 1045px;
+        height: 560px;
+    }
+        .webshop-info .webshop-info-body .webshop-info-body-1 img {
+            display: inline;
+        }
+        .webshop-info .webshop-info-body .webshop-info-body-1 h1 {
+            position: absolute;
+            top: 180px;
+            left: 40px;
+            font-family: var(--font-poppins);
+            font-size: var(--font-size-45);
+            font-weight: var(--font-weight-bold);
+        }
+            .webshop-info .webshop-info-body .webshop-info-body-1 h1 span {
+                display: block;
+            }
+        .webshop-info .webshop-info-body .webshop-info-body-1 p {
+            display: inline;
+            position: absolute;
+            top: 320px;
+            left: 40px;
+            width: 425px;
+            height: 75px;
+        }
+        .webshop-info .webshop-info-body .webshop-info-body-1 button {
+            position: absolute;
+            top: 420px;
+            left: 40px;
+        }
+
+    /* webshop new-arrivals part */
+    .webshop-info .webshop-info-body .webshop-info-body-2 {
+       position: relative; 
+       width: 635px;
+       height: 560px;
+       background-color: var(--color-gray-3);
+    }
+        .webshop-info .webshop-info-body .webshop-info-body-2 img {
+            position: relative;
+            display: inline;
+        }
+        .webshop-info .webshop-info-body .webshop-info-body-2 h1 {
+            position: absolute;
+            top: 280px;
+            left: 40px;
+            font-family: var(--font-poppins);
+            font-size: var(--font-size-45);
+            font-weight: var(--font-weight-bold); 
+        }
+            .webshop-info .webshop-info-body .webshop-info-body-2 h1 span {
+                display: block;
+            }
+        .webshop-info .webshop-info-body .webshop-info-body-2 button {
+            position: absolute;
+            top: 420px;
+            left: 40px;
+            padding: 24px 65px;
+        }
+}

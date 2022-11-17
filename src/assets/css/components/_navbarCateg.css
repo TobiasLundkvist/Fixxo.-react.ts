@@ -1,0 +1,88 @@
+.navbarlinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+    .navbarlinks .navbarlink {
+    padding-left: 8px;
+    padding-right: 8px;
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-16);
+    transition: 0.3s ease-in-out;
+    color: var(--color-light-dark);
+    }
+        .navbarlinks .navbarlink:hover {
+            font-size: var(--font-size-18);
+            text-decoration: underline;
+            color: var(--color-gray-3);
+        }
+
+
+    .navbarlinks .active {
+    color: var(--color-red-hover);
+    text-decoration: underline;
+    }
+
+
+@media (min-width: 960px) {
+    .navbarlinks {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+        .navbarlinks .navbarlink {
+        padding-left: 15px;
+        padding-right: 15px;
+        text-decoration: none;
+        font-weight: var(--font-weight-medium);
+        font-size: var(--font-size-16);
+        transition: 0.3s ease-in-out;
+        color: var(--color-light-dark);
+        }
+            .navbarlinks .navbarlink:hover {
+                font-size: var(--font-size-18);
+                text-decoration: underline;
+                color: var(--color-gray-3);
+            }
+    
+    
+        .navbarlinks .active {
+        color: var(--color-red-hover);
+        text-decoration: underline;
+        }
+
+}
+@media (min-width: 1600px) {
+    .navbarlinks {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+        .navbarlinks .navbarlink {
+        padding-left: 15px;
+        padding-right: 15px;
+        text-decoration: none;
+        font-weight: var(--font-weight-medium);
+        font-size: var(--font-size-16);
+        transition: 0.3s ease-in-out;
+        color: var(--color-light-dark);
+        }
+            .navbarlinks .navbarlink:hover {
+                font-size: var(--font-size-18);
+                text-decoration: underline;
+                color: var(--color-gray-3);
+            }
+    
+    
+        .navbarlinks .active {
+        color: var(--color-red-hover);
+        text-decoration: underline;
+        }
+    
+}
+
+

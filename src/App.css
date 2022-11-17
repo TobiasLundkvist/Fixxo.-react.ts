@@ -1,38 +1,18 @@
-.App {
-  text-align: center;
-}
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Cores */
+@import './assets/css/cores/_variables.css';
+@import './assets/css/cores/_base.css';
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Section */
+@import './assets/css/section/_navbarSection.css';
+@import './assets/css/section/_showcaseSection.css';
+@import './assets/css/section/_newArrivalsSection.css';
+@import './assets/css/section/_collabsSection.css';
+@import './assets/css/section/_specialitySection.css';
+@import './assets/css/section/_shopTermsSection.css';
+@import './assets/css/section/_footerSection.css';
+@import './assets/css/section/_breadcrumbSection.css';
+@import './assets/css/section/_mapSection.css';
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

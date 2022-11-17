@@ -5,7 +5,6 @@ interface NavbarShopProps {
   link: string;
   icon: string;
   badge?: number;
-
 }
 
 

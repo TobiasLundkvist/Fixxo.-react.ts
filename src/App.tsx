@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useState, useEffect } from 'react'
 import {BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomeView from './views/HomeView';
 import CategoriesView from './views/CategoriesView';
@@ -10,11 +11,33 @@ import NotFoundView from './views/NotFoundView';
 import SearchView from './views/SearchView';
 import ShoppingCartView from './views/ShoppingCartView';
 import WishListView from './views/WishListView';
+import { ProductContext, FeaturedProductsContext } from './contexts/contexts';
 
 const App: React.FC = () => {
+  const [products, setProducts] = useState([])
+  const [featured, setFeatured] = useState([])
+
+  useEffect(() => {
+  const fetchAllProducts = async () => {
+      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products')
+      setProducts(await result.json())
+    }
+    fetchAllProducts()
+
+    const fetchFeaturedProducts = async () => {
+      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=8')
+      setFeatured(await result.json())
+    }
+    fetchFeaturedProducts()
+
+
+  }, [setProducts, setFeatured])
+
 
   return (
     <BrowserRouter>
+    <ProductContext.Provider value={products}>
+    <FeaturedProductsContext.Provider value={featured}> 
       <Routes>
         <Route path='/' element={<HomeView />} /> 
         <Route path='/contacts' element={<ContactView />} />
@@ -28,6 +51,8 @@ const App: React.FC = () => {
 
         <Route path='*' element={<NotFoundView />}/>
       </Routes>
+      </FeaturedProductsContext.Provider>
+      </ProductContext.Provider>
     </BrowserRouter>
   );
 }

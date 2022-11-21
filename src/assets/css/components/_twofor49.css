@@ -1,0 +1,131 @@
+.twofor49 {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+}
+
+    .twofor49 .card-grid {
+        display: none;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 30px;
+        margin-right: 40px;
+    }
+    .twofor49 .twofor-body49 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    background-color: var(--color-gray-1-5);
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    }
+
+    .twofor49 .twofor-body49 .twofor-text {
+        font-family: var(--font-poppins);
+        font-size: var(--font-size-45);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-white);
+        padding: 2rem;
+        }
+
+        .twofor49 .twofor-body49 .btn-white .corner-top-left {
+            border-left: 2px solid var(--color-light-dark);
+            border-top: 2px solid var(--color-light-dark);
+        }
+        .twofor49 .twofor-body49 .btn-white .corner-bottom-right {
+            border-right: 2px solid var(--color-light-dark);
+            border-bottom: 2px solid var(--color-light-dark); 
+        }
+
+        @media (min-width: 960px) {
+            .twofor49 {
+                display: flex;
+                justify-content: center;
+                margin-top: 65px;
+            }
+            
+                .twofor49 .card-grid {
+                    display: none;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: auto;
+                    gap: 30px;
+                    margin-right: 40px;
+                }
+                .twofor49 .twofor-body49 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 825px;
+                height: 664px;
+                background-color: var(--color-gray-1-5);
+                margin-left: -0.75rem;
+                margin-right: -0.75rem;
+                }
+            
+                .twofor49 .twofor-body49 .twofor-text {
+                    font-family: var(--font-poppins);
+                    font-size: var(--font-size-45);
+                    font-weight: var(--font-weight-bold);
+                    color: var(--color-white);
+                    padding: 2rem;
+                    }
+            
+                    .twofor49 .twofor-body49 .btn-white .corner-top-left {
+                        border-left: 2px solid var(--color-light-dark);
+                        border-top: 2px solid var(--color-light-dark);
+                    }
+                    .twofor49 .twofor-body49 .btn-white .corner-bottom-right {
+                        border-right: 2px solid var(--color-light-dark);
+                        border-bottom: 2px solid var(--color-light-dark); 
+                    }
+
+        }
+
+        @media (min-width: 1600px) {
+            .twofor49 {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 65px;
+            }
+            
+                .twofor49 .card-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: auto;
+                    gap: 30px;
+                    margin-right: 40px;
+                }
+                .twofor49 .twofor-body49 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 825px;
+                height: 664px;
+                background-color: var(--color-gray-1-5);
+                margin-left: -0.75rem;
+                margin-right: -0.75rem;
+                }
+            
+                .twofor49 .twofor-body49 .twofor-text {
+                    font-family: var(--font-poppins);
+                    font-size: var(--font-size-45);
+                    font-weight: var(--font-weight-bold);
+                    color: var(--color-white);
+                    padding: 2rem;
+                    }
+            
+                    .twofor49 .twofor-body49 .btn-white .corner-top-left {
+                        border-left: 2px solid var(--color-light-dark);
+                        border-top: 2px solid var(--color-light-dark);
+                    }
+                    .twofor49 .twofor-body49 .btn-white .corner-bottom-right {
+                        border-right: 2px solid var(--color-light-dark);
+                        border-bottom: 2px solid var(--color-light-dark); 
+                    }
+
+        }

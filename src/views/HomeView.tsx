@@ -8,6 +8,8 @@ import ShopTermsSection from '../section/ShopTermsSection'
 import ShowcaseSection from '../section/ShowcaseSection'
 import SpecialitySection from '../section/SpecialitySection'
 import { FeaturedProductsContext, } from '../contexts/contexts'
+import TwoForSection from '../section/TwoForSection'
+import RankingProducts from '../section/RankingProducts'
 
 
 const HomeView: React.FC = () => {
@@ -16,17 +18,21 @@ const HomeView: React.FC = () => {
 
   return (
     <>
-      <div className='gradient-gray'>
+    <div className='gradient-gray'>
       <NavbarSection />
-      </div>
-      <ShowcaseSection />
-      <NewArrivalsSection />
-      <ProductGridSection  />
-      <CollabsSection />
-      <SpecialitySection />
+    </div>
+      { products && <>
+        <ShowcaseSection />
+        <NewArrivalsSection />
+        <ProductGridSection items={products}/>
+        <CollabsSection />
+        <SpecialitySection />
+        <TwoForSection />
+        <RankingProducts />
 
+      </>}
       <ShopTermsSection />
-      <FooterSection />
+      <FooterSection /> 
     </>
   )
 }

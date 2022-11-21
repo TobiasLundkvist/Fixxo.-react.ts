@@ -1,8 +1,9 @@
 import React from 'react'
+import NavbarSection from '../section/NavbarSection'
 
 const CategoriesView: React.FC = () => {
   return (
-    <div>CategoriesView</div>
+    <NavbarSection />
   )
 }
 

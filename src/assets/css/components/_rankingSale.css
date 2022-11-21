@@ -1,0 +1,112 @@
+.sale-background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #7E7F80;
+    width: 100%;
+    height: 326px;
+    margin-top: 60px;
+}
+    .sale-background h3 {
+        font-size: var(--font-size-45);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-white);
+        padding: 10px
+    
+    }
+    .sale-background p {
+        font-size: var(--font-size-20);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-white);
+    }
+
+    .sale-background .btn-white {
+        margin-top: 10px;
+    }
+
+        .sale-background .btn-white .corner-bottom-right {
+            border-right: 2px solid var(--color-light-dark);
+            border-bottom: 2px solid var(--color-light-dark); 
+        }
+        .sale-background .btn-white .corner-top-left {
+            border-left: 2px solid var(--color-light-dark);
+            border-top: 2px solid var(--color-light-dark); 
+        }
+
+@media (min-width: 960px) {
+    .sale-background {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #7E7F80;
+        width: 825px;
+        height: 326px;
+        margin-top: 60px;
+    }
+        .sale-background h3 {
+            font-size: var(--font-size-45);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-white);
+            padding: 10px
+        
+        }
+        .sale-background p {
+            font-size: var(--font-size-20);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-white);
+        }
+    
+        .sale-background .btn-white {
+            margin-top: 10px;
+        }
+    
+            .sale-background .btn-white .corner-bottom-right {
+                border-right: 2px solid var(--color-light-dark);
+                border-bottom: 2px solid var(--color-light-dark); 
+            }
+            .sale-background .btn-white .corner-top-left {
+                border-left: 2px solid var(--color-light-dark);
+                border-top: 2px solid var(--color-light-dark); 
+            }
+
+}
+@media (min-width: 1600px) {
+    .sale-background {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #7E7F80;
+        width: 1110px;
+        height: 326px;
+        margin-top: 60px;
+    }
+        .sale-background h3 {
+            font-size: var(--font-size-45);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-white);
+            padding: 10px
+        
+        }
+        .sale-background p {
+            font-size: var(--font-size-20);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-white);
+        }
+    
+        .sale-background .btn-white {
+            margin-top: 10px;
+        }
+    
+            .sale-background .btn-white .corner-bottom-right {
+                border-right: 2px solid var(--color-light-dark);
+                border-bottom: 2px solid var(--color-light-dark); 
+            }
+            .sale-background .btn-white .corner-top-left {
+                border-left: 2px solid var(--color-light-dark);
+                border-top: 2px solid var(--color-light-dark); 
+            }
+    
+}

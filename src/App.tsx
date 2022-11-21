@@ -11,11 +11,14 @@ import NotFoundView from './views/NotFoundView';
 import SearchView from './views/SearchView';
 import ShoppingCartView from './views/ShoppingCartView';
 import WishListView from './views/WishListView';
-import { ProductContext, FeaturedProductsContext } from './contexts/contexts';
+import { ProductContext, FeaturedProductsContext, TwoForProductsContext, ProductsRankContext, RelatedProductContext } from './contexts/contexts';
 
 const App: React.FC = () => {
   const [products, setProducts] = useState([])
   const [featured, setFeatured] = useState([])
+  const [twoFor, setTwoFor] = useState([])
+  const [productsRank, setProductsRank] = useState ([])
+  const [realatedProduct, setRealatedProduct] = useState([])
 
   useEffect(() => {
   const fetchAllProducts = async () => {
@@ -29,15 +32,32 @@ const App: React.FC = () => {
       setFeatured(await result.json())
     }
     fetchFeaturedProducts()
+    const fetchTwoForProducts = async () => {
+      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4')
+      setTwoFor(await result.json())
+    }
+    fetchTwoForProducts()
 
+    const fetchProductsRank = async () => {
+      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=3')
+      setProductsRank(await result.json())
+    }
+    fetchProductsRank()
 
-  }, [setProducts, setFeatured])
-
+    const fetchRealatedProduct = async () => {
+      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4')
+      setRealatedProduct(await result.json())
+    }
+    fetchRealatedProduct()
+  }, [setProducts, setFeatured, setTwoFor, setProductsRank, setRealatedProduct])
 
   return (
     <BrowserRouter>
     <ProductContext.Provider value={products}>
     <FeaturedProductsContext.Provider value={featured}> 
+    <TwoForProductsContext.Provider value={twoFor}>
+      <ProductsRankContext.Provider value={productsRank}>
+      <RelatedProductContext.Provider value={realatedProduct}>
       <Routes>
         <Route path='/' element={<HomeView />} /> 
         <Route path='/contacts' element={<ContactView />} />
@@ -51,6 +71,9 @@ const App: React.FC = () => {
 
         <Route path='*' element={<NotFoundView />}/>
       </Routes>
+      </RelatedProductContext.Provider>
+      </ProductsRankContext.Provider>
+      </TwoForProductsContext.Provider>
       </FeaturedProductsContext.Provider>
       </ProductContext.Provider>
     </BrowserRouter>

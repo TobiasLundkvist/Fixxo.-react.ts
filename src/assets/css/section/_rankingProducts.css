@@ -1,0 +1,9 @@
+@import '../components/_rankingSale.css';
+@import '../components/_rankingProduct.css';
+
+.rankProducts {
+    max-width: 1110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

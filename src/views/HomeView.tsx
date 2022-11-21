@@ -29,7 +29,6 @@ const HomeView: React.FC = () => {
         <SpecialitySection />
         <TwoForSection />
         <RankingProducts />
-
       </>}
       <ShopTermsSection />
       <FooterSection /> 

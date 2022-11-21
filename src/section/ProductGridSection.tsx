@@ -3,7 +3,7 @@ import ProductCard from '../components/ProductCard'
 import { IProduct } from '../models/ProductModel'
 
 interface props {
-items: IProduct[]
+  items: IProduct[]
 }
 
 const ProductGridSection: React.FC<props> = ({items}) => {

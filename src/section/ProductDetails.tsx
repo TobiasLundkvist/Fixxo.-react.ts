@@ -1,6 +1,5 @@
-import React, {useContext, useState, useEffect } from 'react'
+import React, {useState } from 'react'
 import ProductCard from '../components/ProductCard';
-import { IProduct } from '../models/ProductModel';
 import BreadcrumbSection from './BreadcrumbSection';
 
 

@@ -1,35 +1,40 @@
 import React, { useState } from 'react'
 import { validate } from '../contexts/validation'
 
+export interface ContactFormDataType {
 
-const ContactFormsSection = () => {
+}
+
+
+
+const ContactFormsSection: React.FC = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [comments, setComments] = useState('')
     const [errors, setErrors] = useState({ name, email, comments })
-    const [submitted, setSubmitted] = useState(false)
-    const [failedSubmit, setFailedSubmit] = useState(false)
+    const [submitted, setSubmitted] = useState<boolean>(false)
+    const [failedSubmit, setFailedSubmit] = useState<boolean>(false)
   
   
       const handleChange = (e:any) => {
       const {id, value} = e.target
   
       switch(id) {
-          case 'name':
-          setName(value)
-          break
-          case 'email':
-          setEmail(value)
-          break
-          case 'comments':
-          setComments(value)
-          break
+        case 'name':
+        setName(value)
+        break
+        case 'email':
+        setEmail(value)
+        break
+        case 'comments':
+        setComments(value)
+        break
       }
   
       setErrors({...errors, [id]: validate(e)})
       }
   
-    const handleSubmit = (e:any) => {
+    const handleSubmit = (e:React.FormEvent) => {
       e.preventDefault()
       setFailedSubmit(false)
       setSubmitted(false)
@@ -44,27 +49,26 @@ const ContactFormsSection = () => {
         setComments('')
         
         fetch("https://win22-webapi.azurewebsites.net/api/contactform", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: json
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: json
         })
         .then(res => {
-            console.log(res.status)
+          console.log(res.status)
 
-            if(res.status === 200) {
-                setSubmitted(true)
-                setFailedSubmit(false)
-            } else {
-                setSubmitted(false)
-                setFailedSubmit(true)
-            }
+          if(res.status === 200) {
+            setSubmitted(true)
+            setFailedSubmit(false)
+          } else {
+            setSubmitted(false)
+            setFailedSubmit(true)
+          }
 
         })
-      
     } else {
-        setSubmitted(false)
+      setSubmitted(false)
     }
   }
 
@@ -73,21 +77,17 @@ const ContactFormsSection = () => {
     <section className="contact">
       <div className="container">
 
-        {
-          submitted ? (
+        {submitted ? (
           <div className="alert alert-success text-center mb-5" role="alert">
             <h3>Thank you for your comments</h3> 
             <p>We will contact you as soon as possible.</p>
-            </div>  ) : (<></>)
-        }
+          </div>  ) : (<></>)}
 
-        {
-          failedSubmit ? (
+        {failedSubmit ? (
           <div className="alert alert-danger text-center mb-5" role="alert">
             <h3>Something went wrong!</h3> 
             <p>We could not submit your comment</p>
-            </div>  ) : (<></>)
-        }
+          </div>  ) : (<></>)}
 
         <h3>Come in Contact with Us</h3>
         <form className="contact-form" onSubmit={handleSubmit} noValidate>

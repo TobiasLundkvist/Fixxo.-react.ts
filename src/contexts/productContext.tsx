@@ -27,7 +27,7 @@ export const useProductContext = () => { return useContext(ProductContext) }
 
 const ProductProvider: React.FC<ProductProviderProps> =({children}) => {
     const baseUrl: string = 'https://win22-webapi.azurewebsites.net/api/products'
-    const emptyValues: IProduct = { articleNumber: '', name: '', category: '', price: 0, imageName: ''  }
+    const emptyValues: IProduct = { articleNumber: '', name: '', category: '', price: 0, imageName: '', rating: 0, description:''  }
 
     const [product, setProduct] = useState<IProduct>(emptyValues)
     const [products, setProducts] = useState<IProduct[]>([])

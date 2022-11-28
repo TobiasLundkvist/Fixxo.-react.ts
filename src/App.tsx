@@ -12,12 +12,14 @@ import SearchView from './views/SearchView';
 import ShoppingCartView from './views/ShoppingCartView';
 import WishListView from './views/WishListView';
 import ProductProvider from './contexts/productContext';
+import { ShoppingCartProvider } from './contexts/shoppingCartContext';
 
 const App: React.FC = () => {
 
   return (
     <BrowserRouter>
       <ProductProvider>
+      <ShoppingCartProvider>
       <Routes>
         <Route path='/' element={<HomeView />} /> 
         <Route path='/contacts' element={<ContactView />} />
@@ -31,6 +33,7 @@ const App: React.FC = () => {
 
         <Route path='*' element={<NotFoundView />}/>
       </Routes>
+      </ShoppingCartProvider>
       </ProductProvider>  
     </BrowserRouter>
   );

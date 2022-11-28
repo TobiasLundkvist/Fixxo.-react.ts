@@ -1,33 +1,30 @@
-import React, {useContext, useState, useEffect } from 'react'
+import React, {useContext, useEffect } from 'react'
 import NavbarSection from '../section/NavbarSection'
 import { useParams } from 'react-router-dom'
-import { RelatedProductContext } from '../contexts/contexts'
 import ProductDetails from '../section/ProductDetails'
-import { IProduct } from '../models/ProductModel'
+import { ProductContextType, useProductContext } from '../contexts/productContext'
 
-interface props {
-  items?: IProduct[]
-}
 
-const ProductDetailsView: React.FC<props> = ({items}) => {
 
-  const realatedProduct = useContext(RelatedProductContext)
+const ProductDetailsView: React.FC = () => {
 
-  const {id} = useParams()
-  const [product, setProduct] = useState({})
-
-  useEffect (() => {
-    const fetchData = async () => {
-      const result = await fetch(`https://win22-webapi.azurewebsites.net/api/products/${id}`)
-      setProduct(await result.json())
-    }
-    fetchData()
+  const {id} = useParams<string>()
+  const productContext = useProductContext() as ProductContextType
+  useEffect(() => {
+    productContext.getProduct(id)
   }, [])
+
+
+  const {realatedProduct, getRealatedProducts} = useProductContext() as ProductContextType;
+  useEffect(() => {
+    getRealatedProducts()
+  }, [])
+
 
   return (
     <>
     <NavbarSection />
-    <ProductDetails product={product} items={realatedProduct}/>
+    <ProductDetails product={productContext.product} items={realatedProduct}/>
 
 
     </>

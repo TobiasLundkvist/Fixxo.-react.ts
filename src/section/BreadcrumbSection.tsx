@@ -6,7 +6,7 @@ interface BreadcrumbProps {
   currentPage: string;
 }
 
-const BreadcrumbSection = ({link, currentPage}: BreadcrumbProps) => {
+const BreadcrumbSection: React.FC<BreadcrumbProps> = ({link, currentPage}) => {
   return (
     <section className="breadcrumb">
       <div className='container'>

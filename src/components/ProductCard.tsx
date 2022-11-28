@@ -1,8 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { IProduct } from '../models/ProductModel'
+
+interface ProductCardProps {
+  product: IProduct
+}
 
 
-const ProductCard = ({product}:any) => {
+const ProductCard: React.FC<ProductCardProps> = ({product}) => {
   return (
     <div className="the-product">
       <div className="product-card">

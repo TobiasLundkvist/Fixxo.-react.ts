@@ -1,9 +1,15 @@
 import React, {useState } from 'react'
 import ProductCard from '../components/ProductCard';
 import BreadcrumbSection from './BreadcrumbSection';
+import { IProduct } from '../models/ProductModel';
+
+interface ProductDetailsProps {
+  product: IProduct;
+  items: any
+}
 
 
-const ProductDetails = ({product, items}:any) => {
+const ProductDetails: React.FC<ProductDetailsProps> = ({product, items}) => {
 
     const [count, setCount] = useState(0)
 

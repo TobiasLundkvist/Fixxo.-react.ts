@@ -1,18 +1,19 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import TwoFor29 from '../components/TwoFor29'
 import TwoFor49 from '../components/TwoFor49'
-import { TwoForProductsContext } from '../contexts/contexts'
+import { ProductContextType, useProductContext } from '../contexts/productContext'
 
 const TwoForSection: React.FC = () => {
+  const {twoFor, getTwoFor} = useProductContext() as ProductContextType;
 
-    const twoFor = useContext(TwoForProductsContext)
+  useEffect(() => {
+    getTwoFor()
+  }, [])
 
   return (
     <>
-        { twoFor && <>
-            <TwoFor29 items={twoFor} />
-            <TwoFor49 items={twoFor} />
-        </>}
+      <TwoFor29 items={twoFor} />
+      <TwoFor49 items={twoFor} />
     </>
   )
 }

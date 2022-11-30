@@ -1,0 +1,17 @@
+.product-form {
+    max-width: 1110px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 30px;
+}
+    .product-form .product-form-body {
+        width: 100%;
+    }
+    .product-form .create-product {
+        font-family: var(--font-poppins);
+        font-size: 30px;
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-light-dark);
+    }

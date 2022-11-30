@@ -23,4 +23,9 @@
 @import './assets/css/section/_notFoundView.css';
 @import './assets/css/section/_shoppingCart.css';
 
+/* Components */
+@import './assets/css/components/_userList.css';
+@import './assets/css/components/_createProduct.css';
+
+
 

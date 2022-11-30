@@ -1,11 +1,6 @@
 import React, { useState } from 'react'
 import { validate } from '../contexts/validation'
 
-export interface ContactFormDataType {
-
-}
-
-
 
 const ContactFormsSection: React.FC = () => {
     const [name, setName] = useState('')

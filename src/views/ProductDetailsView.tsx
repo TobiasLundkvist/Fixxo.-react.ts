@@ -17,7 +17,7 @@ const ProductDetailsView: React.FC = () => {
 
   const {realatedProduct, getRealatedProducts} = useProductContext() as ProductContextType;
   useEffect(() => {
-    getRealatedProducts()
+    getRealatedProducts(3)
   }, [])
 
 

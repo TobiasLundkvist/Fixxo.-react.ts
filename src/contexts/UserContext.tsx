@@ -20,7 +20,7 @@ export const ProductContext = createContext<IProductContext | null>(null)
 export const useUserContext = () => { return useContext(ProductContext) }
 
 const UserProvider = ({children}: ProductProviderProps) => {
-    const baseUrl = 'http://localhost:5000/api/products'
+    const baseUrl = 'http://localhost:5000/api/manageproducts'
     const product_default: IProduct = {id: 0, imageName: '', name: '', category: '', price: 0, articleNumber: '', rating: 0}
     const createProductRequest_default: ICreateProduct = {imageName: '', name: '', category: '', price: 0, articleNumber: '', rating: 0}
 

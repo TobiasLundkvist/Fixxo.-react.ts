@@ -16,7 +16,7 @@ const HomeView: React.FC = () => {
   const {featured, getFeatured} = useProductContext() as ProductContextType;
   
   useEffect(() => {
-    getFeatured()
+    getFeatured(8)
   }, [])
 
   return (

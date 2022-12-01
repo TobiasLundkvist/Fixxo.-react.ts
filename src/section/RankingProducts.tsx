@@ -7,7 +7,7 @@ const RankingProducts: React.FC = () => {
   const {productsRank, getProductsRank} = useProductContext() as ProductContextType;
 
   useEffect(() => {
-    getProductsRank()
+    getProductsRank(3)
   }, [])
 
   return ( 

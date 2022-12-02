@@ -24,7 +24,7 @@ const CreateProduct: React.FC = () => {
             <button type="submit" className='btn-red'>CREATE PRODUCT</button>
           </form>
         </div>
-        <div className='product-form-body'>
+        {/* <div className='product-form-body'>
           <form onSubmit={update}>
             <h3 className='create-product'>Update Product</h3>
             <input value={product.id} onChange={(e) => setProduct({...product, id:Number (e.target.value)})} type="text" className='form-control py-2 mb-3' placeholder='Articlenumber' />
@@ -34,7 +34,7 @@ const CreateProduct: React.FC = () => {
             
             <button type="submit" className='btn-red'>UPDATE PRODUCT</button>
           </form>
-        </div>
+        </div> */}
       </div>
     </section>
   )

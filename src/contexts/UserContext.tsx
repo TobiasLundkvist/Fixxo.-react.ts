@@ -29,6 +29,7 @@ const UserProvider = ({children}: ProductProviderProps) => {
     const [products, setProducts] = useState<IProduct[]>([])
 
 
+    //Skapa en produkt till API
     const create = async (e: React.FormEvent) => {
       e.preventDefault()
 
@@ -45,20 +46,23 @@ const UserProvider = ({children}: ProductProviderProps) => {
       } else {
         console.log('error')
       }
-
-
-
     }
+
+    //Hämta ut en Produkt
     const get = async (id:number) => {
       const result = await fetch(`${baseUrl}/${id}`)
       if (result.status === 200)
         setProduct(await result.json())
     }
+
+    //Hämta ut alla produkter
     const getAll = async () => {
       const result = await fetch(`${baseUrl}`)
       if (result.status === 200)
         setProducts(await result.json())
     }
+
+    //Uppdatera en produkt
     const update = async (e: React.FormEvent) => {
       e.preventDefault()
 
@@ -73,6 +77,8 @@ const UserProvider = ({children}: ProductProviderProps) => {
       if (result.status === 200) 
         setProduct(await result.json()) 
     }
+
+    //Ta bort en produkt
     const remove = async (id: number) => {
       const result = await fetch(`${baseUrl}/${id}`, { 
         method: 'delete' 

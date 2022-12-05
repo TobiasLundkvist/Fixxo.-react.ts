@@ -42,7 +42,7 @@ const ProductProvider: React.FC<ProductProviderProps> =({children}) => {
     // Hämtar en produkt baserat på articleNumber
     const getProduct = async (articleNumber?: string) => {
         if(articleNumber !== undefined) {
-            const res = await fetch(`${baseUrl}/details/${articleNumber}`)
+            const res = await fetch(`${baseUrl}/product/details/${articleNumber}`)
             setProduct(await res.json())
         }
     }

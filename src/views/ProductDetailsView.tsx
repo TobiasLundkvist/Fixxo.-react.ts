@@ -12,7 +12,7 @@ const ProductDetailsView: React.FC = () => {
   const productContext = useProductContext() as ProductContextType
   useEffect(() => {
     productContext.getProduct(id)
-  }, [])
+  }, [id])
 
 
   const {realatedProduct, getRealatedProducts} = useProductContext() as ProductContextType;

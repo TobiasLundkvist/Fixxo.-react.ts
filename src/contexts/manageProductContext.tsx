@@ -1,6 +1,6 @@
 import React, {useState, useContext, createContext} from 'react'
-import { IProduct, ICreateProduct } from '../models/UserModels'
-import { ProductProviderProps } from '../models/UserProviderPropsModel'
+import { IProduct, ICreateProduct } from '../models/ManageProductModels'
+import { ProductProviderProps } from '../models/ManageProviderPropsModel'
 
 export interface IProductContext {
   product: IProduct
@@ -9,27 +9,27 @@ export interface IProductContext {
   setCreateProductRequest: React.Dispatch<React.SetStateAction<ICreateProduct>>
   products: IProduct[]
   create: (e: React.FormEvent) => void
-  get: (id:number) => void
+  get: (id:string | number) => void
   getAll: () => void
-  update: (e: React.FormEvent) => void
-  remove: (id: number) => void
+  update: () => Promise<void>
+  remove: (articleNumber: any) => void
 }
 
 
 export const ProductContext = createContext<IProductContext | null>(null)
-export const useUserContext = () => { return useContext(ProductContext) }
+export const useManageProductContext = () => { return useContext(ProductContext) }
 
-const UserProvider = ({children}: ProductProviderProps) => {
-    const baseUrl = 'http://localhost:5000/api/manageproducts'
-    const product_default: IProduct = {id: 0, imageName: '', name: '', category: '', price: 0, articleNumber: '', rating: 0}
-    const createProductRequest_default: ICreateProduct = {imageName: '', name: '', category: '', price: 0, articleNumber: '', rating: 0}
+const ManageProductProvider = ({children}: ProductProviderProps) => {
+    const baseUrl = 'http://localhost:5000/api/products'
+    const product_default: IProduct = {tag: '', id: 0, imageName: '', name: '', category: '', price: 0, articleNumber: '', rating: 0}
+    const createProductRequest_default: ICreateProduct = { tag: '', imageName: '', name: '', category: '', price: 0, articleNumber: '', rating: 0}
 
     const [product, setProduct] = useState<IProduct>(product_default)
     const [createProductRequest, setCreateProductRequest] = useState<ICreateProduct>(createProductRequest_default)
     const [products, setProducts] = useState<IProduct[]>([])
 
 
-    //Skapa en produkt till API
+    //Skapa en produkt till API/funkar
     const create = async (e: React.FormEvent) => {
       e.preventDefault()
 
@@ -48,9 +48,38 @@ const UserProvider = ({children}: ProductProviderProps) => {
       }
     }
 
+    //Uppdatera en produkt/funkar
+    const update = async () => {
+
+      const result = await fetch(`${baseUrl}/${product.articleNumber}`, {
+        method: 'put',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(product)
+
+      })
+
+      if (result.status === 200) {
+        const data = await result.json()
+        setProduct(data) 
+      }
+
+    }
+
+    //Ta bort en produkt/funkar
+    const remove = async (articleNumber: any) => {
+      const result = await fetch(`${baseUrl}/${articleNumber}`, { 
+        method: 'delete' 
+      })
+
+      if (result.status === 204) 
+        setProduct(product_default) 
+    }
+
     //Hämta ut en Produkt
-    const get = async (id:number) => {
-      const result = await fetch(`${baseUrl}/${id}`)
+    const get = async (id: string | number) => {
+      const result = await fetch(`${baseUrl}/product/details/${id}`)
       if (result.status === 200)
         setProduct(await result.json())
     }
@@ -62,31 +91,6 @@ const UserProvider = ({children}: ProductProviderProps) => {
         setProducts(await result.json())
     }
 
-    //Uppdatera en produkt
-    const update = async (e: React.FormEvent) => {
-      e.preventDefault()
-
-      const result = await fetch(`${baseUrl}/${product.id}`, {
-        method: 'put',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(product)
-      })
-
-      if (result.status === 200) 
-        setProduct(await result.json()) 
-    }
-
-    //Ta bort en produkt
-    const remove = async (id: number) => {
-      const result = await fetch(`${baseUrl}/${id}`, { 
-        method: 'delete' 
-      })
-
-      if (result.status === 204) 
-        setProduct(product_default) 
-    }
 
 
   return (
@@ -96,4 +100,4 @@ const UserProvider = ({children}: ProductProviderProps) => {
   )
 }
 
-export default UserProvider
+export default ManageProductProvider

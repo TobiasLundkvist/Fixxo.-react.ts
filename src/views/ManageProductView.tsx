@@ -1,6 +1,6 @@
 import React from 'react'
 import CreateProduct from '../components/CreateProduct'
-import UserList from '../components/UserList'
+import ManageProductList from '../components/ManageProductList'
 import FooterSection from '../section/FooterSection'
 import NavbarSection from '../section/NavbarSection'
 
@@ -12,7 +12,7 @@ const ManageProductView: React.FC = () => {
         <NavbarSection />
         <CreateProduct />
         <hr className='my-5'/>
-        <UserList />
+        <ManageProductList />
         <FooterSection />
 
     </>

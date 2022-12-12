@@ -16,6 +16,7 @@
                 font-family: var(--font-poppins);
                 font-size: var(--font-size-16);
                 font-weight: var(--font-weight-medium);
+                color: var(--color-red);
                 margin-left: 5px;
                 transition: 0.1s ease-in-out;
             }

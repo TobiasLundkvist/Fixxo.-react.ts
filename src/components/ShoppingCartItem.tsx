@@ -11,7 +11,6 @@ interface ShoppingCartItemType {
 const ShoppingCartItem: React.FC<ShoppingCartItemType> = ({item}) => {
   const {increment, decrement, remove} = useShoppingCartContext() as ShoppingCartContextProps
 
-  console.log(item.quantity)
 
   return (
     <div className='shoppingcart-item'>

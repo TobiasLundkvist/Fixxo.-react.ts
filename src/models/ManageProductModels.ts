@@ -1,6 +1,7 @@
 // när vi hämtar en produkt
 export interface IProduct {
-   id: number;
+   tag: string
+   id: any;
    imageName: string;
    name: string;
    category: string;
@@ -11,6 +12,7 @@ export interface IProduct {
 
 // vill skapa denna produkt
 export interface ICreateProduct {
+   tag: string
    imageName: string;
    name: string;
    category: string;

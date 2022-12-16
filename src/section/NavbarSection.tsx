@@ -27,7 +27,8 @@ const NavbarSection: React.FC = () => {
         <div className='navbarShop'>
           <NavbarShop link='/search' icon='fa-light fa-magnifying-glass'/>
           <NavbarShop link='/compare' icon='fa-light fa-code-compare'/>
-          <NavbarShop link='/wishlist' icon='fa-light fa-heart' badge={3}/>
+          <NavbarShop link='/wishlist' icon='fa-light fa-heart'/>
+          <NavbarShop link='/signupin' icon='fa-light fa-user'/>
 
           <button className="whiteCircle" type="button" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
             <i className="fa-light fa-bag-shopping"></i>

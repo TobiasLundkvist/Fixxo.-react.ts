@@ -1,0 +1,31 @@
+.login-base {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    .login-base .login-body {
+        border: 1px solid var(--color-gray-1);
+        width: 560px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+        .login-base .login-body h4 {
+            font-size: 1.5rem;
+        }
+            .login-base .login-body .login {
+                width: 500px;
+            }
+                .login-base .login-body .login form {
+                    display: grid;
+                }
+                    .login-base .login-body .login form label {
+                        color: var(--color-red);
+                    }
+                    .login-base .login-body .login form input {
+                        height: 50px; 
+                    }

@@ -20,11 +20,14 @@ const UserList = () => {
           {
             products.map((product: IProduct) => (
             <div 
-              key={product.articleNumber} className='list-product'>tag: {product.tag} {product.id} <br></br> {product.articleNumber} <br></br> {product.name} <br></br> {product.category} <br></br> {product.price} <br></br> {product.rating} <br></br> {product.imageName}
-              <button className='btn' onClick={() => remove(product.articleNumber)}><i className='fa-regular fa-trash'></i></button>
-              <NavLink to={`/update/${product.articleNumber}`}>
-                <button className='btn'><i className='fa-regular fa-gear'></i></button>
-              </NavLink>
+              key={product.articleNumber} className='list-product'> <img src={product.imageName} alt={product.name}/> tag: {product.tag} <br></br> {product.name} <br></br> {product.category} <br></br> {product.rating} <br></br> {product.price}
+              
+              <div>
+                <button className='btn mx-1' onClick={() => remove(product.articleNumber)}><i className='fa-regular fa-trash'></i></button>
+                <NavLink to={`/update/${product.articleNumber}`}>
+                  <button className='btn mx-1'><i className='fa-regular fa-gear'></i></button>
+                </NavLink>
+              </div>
             </div>))
           }
         </div>

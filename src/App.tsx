@@ -16,6 +16,9 @@ import { ShoppingCartProvider } from './contexts/shoppingCartContext';
 import ManageProductView from './views/ManageProductView';
 import ManageProductProvider from './contexts/manageProductContext';
 import UpdateProductView from './views/UpdateProductView';
+import RegisterProvider from './contexts/signUpInContext';
+import SignUpInView from './views/SignUpInView';
+import RegisterView from './views/RegisterView';
 
 const App: React.FC = () => {
 
@@ -24,6 +27,7 @@ const App: React.FC = () => {
       <ProductProvider>
       <ShoppingCartProvider>
       <ManageProductProvider>
+      <RegisterProvider>
       <Routes>
         <Route path='/' element={<HomeView />} /> 
         <Route path='/contacts' element={<ContactView />} />
@@ -36,9 +40,13 @@ const App: React.FC = () => {
         <Route path='/wishlist' element= {<WishListView />} />
         <Route path='/manage' element= {<ManageProductView />} />
         <Route path='/update/:id' element= {<UpdateProductView />} />
+        <Route path='/signupin' element= {<SignUpInView />} />
+        <Route path='/register' element= {<RegisterView />} />
+
 
         <Route path='*' element={<NotFoundView />}/>
       </Routes>
+      </RegisterProvider>
       </ManageProductProvider>
       </ShoppingCartProvider>
       </ProductProvider>  

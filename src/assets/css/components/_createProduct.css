@@ -9,6 +9,13 @@
     .product-form .product-form-body {
         width: 100%;
     }
+
+        .product-form .product-form-body label {
+            color: var(--color-red);
+            font-size: 0.9em;
+            margin-left: 5px;
+        }
+
     .product-form .create-product {
         font-family: var(--font-poppins);
         font-size: 30px;

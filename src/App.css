@@ -5,6 +5,9 @@
 @import './assets/css/cores/_variables.css';
 @import './assets/css/cores/_base.css';
 
+/* Views */
+@import './assets/css/views/_signUpIn.css';
+
 /* Section */
 @import './assets/css/section/_navbarSection.css';
 @import './assets/css/section/_showcaseSection.css';

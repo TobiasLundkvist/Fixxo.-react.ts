@@ -2,7 +2,7 @@ import React from 'react'
 
 const FooterMedia: React.FC = () => {
   return (
-    <footer className='socialmedia-body'>
+    <footer className='socialmedia-body gradient-gray'>
         <div className='socialmedia'>
           <a href='https://facebook.com' target="_blank" rel="noreferrer"><i className="fa-brands fa-facebook-f"></i></a>
           <a href='https://instagram.com' target="_blank" rel="noreferrer"><i className="fa-brands fa-instagram"></i></a>

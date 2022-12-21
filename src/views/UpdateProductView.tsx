@@ -28,6 +28,7 @@ const handleSubmit = (e: React.FormEvent) => {
       <div className='product-form-body'>
         <form onSubmit={handleSubmit}>
           <h3 className='create-product'>Update Product</h3>
+          <input value={product.tag} onChange={(e) => setProduct({...product, tag: e.target.value})} type="text" className='form-control py-2 mb-3' placeholder='Product tag' />
           <input value={product.category} onChange={(e) => setProduct({...product, category: e.target.value})} type="text" className='form-control py-2 mb-3' placeholder='Category' />
           <input value={product.name} onChange={(e) => setProduct({...product, name: e.target.value})} type="text" className='form-control py-2 mb-3' placeholder='Product name' />
           <input value={product.price} onChange={(e) => setProduct({...product, price: Number(e.target.value)})} type="text" className='form-control py-2 mb-3' placeholder='Price' />
